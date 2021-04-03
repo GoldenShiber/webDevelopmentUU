@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+    <head>
+        <title>Pacific Trails Resort</title>
+        <meta charset="UTF-8" />
+        <link href="../css/main.css" rel="stylesheet"/>
+        <link href="../images/favicon.ico" rel="icon" type="image/ico"/>
+    </head>
+
+    <body>
+        <div id="container">
+            <aside>
+                <header>
+                    <img src="../images/logo.png" alt="Logo" height="222" width="283" />
+                    <h1>Pacific Trails Resort</h1>
+                </header>
+
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"> Home </a></li>
+                        <li><a href="yurt.html"> Yurts </a></li>
+                        <li><a href="activites.html"> Activities </a></li>
+                        <li><a href="#"> Reservations </a></li>
+                        <li><a href="gallery.html"> Gallery </a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <img src="../images/Sunset_Trail.jpg" alt="Sunset at Pacific Ocean" height="771" width="1525" />
+                <section>
+                    <h2>Reservations at Pacific Trails</h2>
+
+                    <h3>Contact Us Today!</h3>
+        
+                    <p>Required fields are marked with an asterisk *.</p>
+            
+                    <form method="post" action="thanks.html">
+            
+                        <p>
+                            <label for="FirstName">First Name*:</label> 
+                            <input type="text" name="firstname" id="FirstName" required />
+                        </p>
+                    
+                        <p>
+                            <label for="LastName">Last Name*:</label> 
+                            <input type="text" name="lastname" id="LastName" required />
+                        </p>
+                        
+                        <p>
+                            <label for="Email">E-mail*:</label>:
+                            <input type="email" name="email" id="Email" required />
+                        </p>
+                        
+                        <p>
+                            <label for="Phone">Phone:</label> 
+                            <input type="tel" name="phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                        </p>
+                        
+                        <p>
+                           <label for="Arrival">Arrival date:</label> 
+                           <input type="date" name="arrival" id="Arrival" />
+                        </p>
+                
+                        <p>
+                           <label for="Nights">Nights:</label>
+                           <select name="nights" id="Nights" >
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                                <option value="five">5</option>
+                            </select>
+                        </p>
+                        
+                        <p>
+                            <label for="Comments">Comments*:</label>
+                            <textarea name="comments" id="Comments" rows="5" cols="30" required></textarea>
+                        </p>   
+            
+                        <p>
+                            <input type="submit" value="Submit your reservation" />
+                            <input type="reset" value="Clear the form" />
+                        </p>
+            
+                    </form>
+                </section>
+
+                <footer>
+                    <p>Pacific Trails Resort, 12010 Pacific Trails Road, Zephyr, CA 95555. Phone: 888-555-5555</p>
+                </footer>
+            </main>
+        </div> <!--end container-->
+    </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang ="sv">
+    <head>
+        <title>Café Choco-Latte</title>
+        <meta charset="UTF-8" />
+        <link href="../css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <!--Jag centraliserar innehållet av hemsidan via div taggen-->
+        <div id="container">
+            <!--Innehåll för bland annat logon och navigering-->
+            <aside>
+                <header>
+                    <img src="../images/Logo.png" alt="Logo" height="308" width="550" />
+                    
+                    <h1>Café Choco-Latte </h1>                   
+                    
+                    <h2>Fantastiskt kaffe & läckra bakverk</h2>
+                    
+                    <p>Vi vill vara en kaffeoas där du känner de intensiva dofterna från kaffet när du kliver in genom dörren. Vi är en plats där du för varje kopp kaffe och bakverk ska uppleva en sann njutning och smaksensation. Vi vill ge dig hög kvaliet utan att tumma på rättvisan gentemot kaffe- och kakaoodlarna.</p>
+                </header>
+                <!--Navigering via en unsorted list-->
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"> Hem </a></li>
+                        <li><a href="#"> Kaffemeny </a></li>
+                        <li><a href="#"> Chokladmeny </a></li>
+                        <li><a href="chokladprovning.html"> Chokladprovning </a>
+                        <li><a href="#"> Om </a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <section>
+                    <h2>Boka chokladprovning</h2>
+                    
+                    <!--Jag har en aning att man kommer fixa lite med JS för att få det möjligt att endast välja ett datum-->
+                    <fieldset>
+                        <!--Hittade legend, det verkar funka som exemplet för den klara hemsidan ska fungera.-->
+                        <legend>Välj datum:</legend>
+                        <!--Vet att man ska undvika div taggen, men funderar på vad som funkar bättre för ett checkbox alternativ.-->
+                        <div>
+                            <input type="checkbox" id="30_april" name="date" value="30 april">
+                            <label for="30_april">30 april</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="2_maj" name="date" value="2 maj">
+                            <label for="2_maj">2 maj</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="7_maj" name="date" value="7 maj">
+                            <label for="7_maj">7 maj</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="9_maj" name="date" value="9 maj">
+                            <label for="9_maj">9 maj</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="14_maj" name="date" value="14 maj">
+                            <label for="14_maj">14 maj</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="16_maj" name="date" value="16 maj">
+                            <label for="16_maj">16 maj</label>
+                        </div>
+                    </fieldset>
+                    
+                    <p>
+                        <!--Måste gå att lösa finare senare via JS!-->
+                        <label for="People">Välj antal personer:</label>
+                                <select name="people" id="People" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                        </select>
+                    </p>
+
+                    <h3>Fyll i dina uppgifter</h3>
+                    <p>
+                        <label for="Name">Namn:</label> 
+                        <input type="text" name="name" id="Name" required />
+                    </p>
+                    
+                    <p>
+                        <label for="Email">Email:</label>
+                        <input type="email" name="Email" id="Email" required />
+                    </p>
+                    
+                    <p>
+                        <label for="Phone">Mobilnummer:</label> 
+                        <input type="tel" name="phone" id="Phone" />
+                    </p>
+
+                    <p>
+                        <label for="Message">Meddelande*:</label>
+                        <textarea name="message" id="Message" rows="2" cols="30" required></textarea>
+                    </p>  
+
+                    <input type="submit" value="Boka" />
+                    
+                </section>
+
+                <footer>
+                    <p>© Copyright 2019 | Café Choco-Latte</p>
+                </footer>
+            </main>
+        </div>
+    </body>
+
+</html>
