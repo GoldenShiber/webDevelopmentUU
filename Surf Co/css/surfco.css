@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../font/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans light';
+    src: url(../font/Open_Sans/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Tegomin';
+    src: url(../font/New_Tegomin/NewTegomin-Regular.ttf);
+}
+
+html{font-size: 105%;}
+
+/* Open Sans is a good general font it seems, at least for text. */
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color:#262014;   
+    background: linear-gradient(to top right, #F2E6D8,  #BFA004);
+    background: linear-gradient(to top right, #8AA6BF,  #3279A6);
+}
+
+#container{
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+/* The color theme is based on a summer image, which I found on adobe color, which looked pretty calm and adventure like */
+/* However, this green like color, might make color-blind see it as pale green or white, which might work anyways.  */
+h2, h3 {
+    color: #565902;
+    margin-bottom: 1rem;
+}
+
+
+/*
+    I enjoy "Tegomin" as a font for kind of calm and adventure texts, which are the "products" and the "our story" part.
+*/
+#products h2, #story h2 {
+    color: #565902;
+    font-family: 'Tegomin';
+}
+
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    /*background: linear-gradient(to top right, #F2E6D8,  #BFA004);*/
+    font-size: 1.8rem;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(to top right, #F2E6D8,  #BFA004);
+}
+
+header p{
+    font-family: 'Tegomin';
+    font-size: 1.5rem;
+}
+
+
+nav ul{
+    display: flex;
+    font-size: 1rem;
+}
+
+nav ul li{
+    width: 50%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+nav a{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+nav a:focus, nav a:hover, nav a:active{
+   color: #BFA004 
+}
+
+nav a:focus{
+    outline: none;
+}
+
+section, aside, footer{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#classes {
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+#classes td, #classes th{
+    border: 1px solid #F2E6D8;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+}
+
+#classes th{
+    padding-bottom: 1rem;
+}
+
+form li {
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+
+/*
+    Found a good breakpoint about 500 min-width, and it worked ok for very large widths it seems. 
+    Used a grid format since it worked ok, since the html file was organized with many small components. (Not as good as they did with resort :) )
+*/
+
+@media(min-width:500px){
+    #container {
+        display: grid;
+        grid-template-rows: 0.05fr 0.8fr 0.05fr 0.02fr;
+        grid-template-columns: 20% 80%;
+        row-gap: 0;
+    }
+
+    main {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    aside {
+        grid-column: 2;
+        grid-row: 3;
+    }  
+
+    nav{
+        grid-column: 1;
+        grid-row: 2/span 3;
+        font-size: 1.5rem;
+        text-align: center;
+     
+        background-color: #F2E6D8;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    
+    header {
+        grid-column: 1/span 2;
+        grid-row: 1;
+    }
+
+    footer {
+        grid-column: 2;
+        grid-row: 4;
+    }
+} 
