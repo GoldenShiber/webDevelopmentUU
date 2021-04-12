@@ -1,0 +1,93 @@
+/*
+ **************************************************/
+html, body
+{
+	padding: 0;
+	margin: 0;
+}
+body
+{
+	color: #555;  /*mörkgrå*/
+	font-family: sans-serif;
+	font-size: medium;
+	background: #D00; /*röd*/
+}
+
+/* Wrapps all content.
+ **************************************************/
+#wrapper
+{
+	background: #FFF; /*vit*/
+	padding: 1em;
+	margin: 1em;
+}
+
+/* Menu
+ **************************************************/
+#menu
+{
+	list-style-type: none;
+	background: #EBEBEB url(images/button.png) repeat-x scroll bottom left; /*ljusgrå*/
+	border: 1px solid #D1D1D1;
+	border-radius: 4px;
+	padding: 0;
+	margin: 0;
+	
+}
+#menu li
+{
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+#menu a
+{
+	color: #D00; /*röd*/
+	text-decoration: none;
+	border-right: 1px solid #D1D1D1;
+	padding: 8px 12px;
+	display: inline-block;
+}
+
+/* If the screen width is less then 480px.
+ **************************************************/
+@media all and (max-width: 480px)
+{
+	body
+	{
+		background: #00D; /*blå*/
+	}
+	#menu
+	{
+		background: transparent none;
+		border: 0 none;
+		border-radius: 0;
+	}
+	#menu li
+	{
+		margin: 8px 0;
+		display: block;
+	}
+	#menu a
+	{
+		color: #00D; /*blå*/
+		background: #EBEBEB url(images/button.png) repeat-x scroll bottom left;
+		border: 1px solid #d1d1d1;
+		border-radius: 4px;
+	}
+}
+
+/* If the screen width is atleast 481px and less then 1000px.
+ * Note: 481px to make sure it does not overlap with our earlier rule.
+ **************************************************/
+@media all and (min-width: 481px) and (max-width: 1000px)
+{
+	body
+	{
+		background: #0A0; /*grön*/
+	}
+	#menu a
+	{
+		color: #0A0;
+	}
+}
