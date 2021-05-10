@@ -109,6 +109,15 @@ footer{
     margin-top: 2rem;
 }
 
+.gallery{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.gallery img{
+    width: 20%;
+}
+
 @media(min-width:620px) and (max-width:1020px){
     #container{
         display: grid;
