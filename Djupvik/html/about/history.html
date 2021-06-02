@@ -5,7 +5,7 @@
         <title>Djupvik - historia</title>
         <meta charset="UTF-8" />
         <link href="../../CSS/reset.css" rel="stylesheet"/>
-        <link href="../../CSS/djupvik.css" rel="stylesheet"/> 
+        <link href="../../CSS/djupvikCSS2.css" rel="stylesheet"/> 
         <!-- <link href="images/favicon.ico" rel="icon" type="images/ico"/> -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
         <meta name="description" content="description" />
@@ -23,19 +23,20 @@
                 </header>
 
                 <nav>
-                    <button class="button" onclick="window.location.href='../../index.html'">Start</button>
-                    <div class="dropdown">
+                    <div class="navbar">
+                        <a href="../../index.html">Start</a>
                         
-                        <button class="dropbtn">Om Djupvik</button>
-                        <div class="dropdown-content">
-                            <a href="guestLocation.html">Gästplatsen</a>
-                            <a href="touristDestinations.html">Turistmål</a>
-                            <a href="#">Historia</a>
-                        </div>    
-                    </div>
-                    <button class="button" onclick="window.location.href='../gallery.html'">Galleri</button>
-                    <button class="button" onclick="window.location.href='../memberInfo.html'">Medlems Info</button>
-                    <button class="button" onclick="window.location.href='../contact.html'">Kontakta Oss</button>
+                        <button class="dropdown-btn">Om Djupvik 
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                        <div class="dropdown-container">
+                          <a href="guestLocation.html">Gästplatsen</a>
+                          <a href="touristDestinations.html">Turistmålet</a>
+                          <a href="#">Historia</a>
+                        </div>
+                        <a href="../gallery.html">Galleri</a>
+                        <a href="../memberInfo.html">Medlems Information</a>
+                        <a href="../contact.html">Kontakta Oss</a>
                 </nav>
 
             </aside>
@@ -159,6 +160,7 @@
             </main>
 
         </div>
+        <script src="../../js/dropdown.js" type="module"></script>
 
     </body>
 

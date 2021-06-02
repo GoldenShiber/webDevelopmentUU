@@ -5,10 +5,10 @@
         <title>Home - Pacific Trails Resort</title>
         <meta charset="UTF-8" />
         <link href="CSS/reset.css" rel="stylesheet"/>
-        <link href="CSS/djupvik.css" rel="stylesheet"/> 
-        <!-- <link href="images/favicon.ico" rel="icon" type="images/ico"/> -->
+        <link href="CSS/djupvikCSS2.css" rel="stylesheet"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
         <meta name="description" content="description" />
+        
     </head>
 
     <body>
@@ -20,19 +20,21 @@
 
                 </header>
                 <nav>
-                    <button class="button" onclick="window.location.href='#'">Start</button>
-                    <div class="dropdown">
+                    <div class="navbar">
+                        <a href="#">Start</a>
                         
-                        <button class="dropbtn">Om Djupvik</button>
-                        <div class="dropdown-content">
-                            <a href="HTML/about/guestLocation.html">Gästplatsen</a>
-                            <a href="HTML/about/touristDestinations.html">Turistmål</a>
-                            <a href="HTML/about/history.html">Historia</a>
-                        </div>    
-                    </div>
-                    <button class="button" onclick="window.location.href='HTML/gallery.html'">Galleri</button>
-                    <button class="button" onclick="window.location.href='HTML/memberInfo.html'">Medlems Info</button>
-                    <button class="button" onclick="window.location.href='HTML/contact.html'">Kontakta Oss</button>
+                        <button class="dropdown-btn">Om Djupvik 
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                        <div class="dropdown-container">
+                          <a href="html/about/guestLocation.html">Gästplatsen</a>
+                          <a href="html/about/touristDestinations.html">Turistmålet</a>
+                          <a href="html/about/history.html">Historia</a>
+                        </div>
+                        <a href="html/gallery.html">Galleri</a>
+                        <a href="html/memberInfo.html">Medlems Information</a>
+                        <a href="html/contact.html">Kontakta Oss</a>
+                      </div>
                 </nav>
 
             </aside>
@@ -105,6 +107,7 @@
             </main>
 
         </div>
+        <script src="js/dropdown.js" type="module"></script>
 
     </body>
 
