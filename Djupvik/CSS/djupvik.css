@@ -1,125 +1,227 @@
 @font-face {
-    font-family: 'Open Sans';
-    src: url(../Fonts/Open_Sans/OpenSans-Regular.ttf);
+  font-family: 'Open Sans';
+  src: url(../Fonts/Open_Sans/OpenSans-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Open Sans light';
-    src: url(../Fonts/Open_Sans/OpenSans-Light.ttf);
+  font-family: 'Open Sans light';
+  src: url(../Fonts/Open_Sans/OpenSans-Light.ttf);
 }
 
 html{font-size: 105%;}
 
 body {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    color:#262014;
-    
+  font-family: "Open Sans", sans-serif;
+  background-color: #F2E4DC;
 }
 
 #container{
-    width: 100%
+  width: 100%;
 }
-
-
-
 
 h1, h2, h3 {
-    font-family: 'Open Sans light';
+  font-family: 'Open Sans light';
 }
 
-h1 {
-    font-size: 2rem;
-    color: #fff;
-    margin-top: 2rem;
+h2, h3 {
+  color:#5687A6
+}
+
+h1 {   
+  font-size: 2rem;
+  color:#fff;
+  margin-top: 2rem;
 }
 
 h2 {
-    font-size: 2.1rem;
-    margin: 2rem 0 2rem;
+
+  font-size: 2.1rem; 
+  margin: 2rem 0 2rem;
 }
 
 h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 p{
-    line-height: 1.5;
-    margin-bottom: 1.8rem;
-}
-/*
-ul ul{
-    visibility:hidden;
-}
-*/
-
-
-#hashLink {
-    display: none;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
 }
 
-#hashLink:target {
-    display: block;
+img{
+  max-width: 100%;
 }
 
-/* Dropdown Button */
-
-.button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    /*font-size: 16px;*/
-    border: none;
+aside {
+  background-color: #012E40;
 }
 
-.button:hover {background-color: #3e8e41;}
-.button:focus {background-color: #3e8e41;}
+header{
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+}
 
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    padding: 0 1rel;
-    /*font-size: 12px; */
-    border: none;
+main {
+  padding: 20px 20px px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Fixed sidenav, full height */
+.navbar {
+  height: 200px;
+  width: 100%;
+  position: fixed;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #012E40;
+  overflow-x: hidden;
+}
+
+/* Style the sidenav links and the dropdown button */
+.navbar a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #012E40;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.navbar a:hover, .dropdown-btn:hover {
+  color: #F2D1B3;
+  background-color: #025E73;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #F2D1B3;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #025E73;
+  padding-left: 8px;
+  padding-left: 0;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+img[alt="Djupvik Hamn Huvudbild"]{
+  padding: 1.4 1.5rem;
+}
+
+
+input, select, textarea{
+  background-color: white;
+  border: 1px solid #012E40;
+  color: #000;
+  font-size: 1.3rem;
+  width: 90%;
+}
+
+input[type="submit"], input[type="reset"]{
+  background-color: #025E73;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+textarea{
+  width: 90%;
+  height: 250px;
+}
+
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  background-color: #ffffff;
+}
+
+input[type="checkbox"] {
+  padding: 1rem;
+}
+
+td, th{
+  border: 1px solid #012E40;
+  padding: 0.3 rem;
+}
+
+td{
+  text-align: center;
+}
+
+tr:nth-of-type(odd){
+  background-color: #F2E4DC;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .navbar {padding-top: 15px;}
+  .navbar a {font-size: 18px;}
+}
+
+/* Some media queries for responsiveness */
+@media (min-width: 731px) {
+  #container{
+    display: grid;
+    grid-template-rows: 100% 100%;
+    grid-template-columns: 30% 70%;
+    
   }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn, .dropdown:focus{background-color: #3e8e41;}
 
-  nav button, nav a{
-    font-size: small;
-    padding: 0 0;
+  main {
+    /* margin-left: 30%; Same as the width of the sidenav  */
+    width: 70%
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  .navbar {
+    height: 100%;
+    /*width: 200px; */
+    width: 20%;
+    position: fixed;
+  }
+
+  .navbar a , .dropdown-btn{
+    padding: 1.5rem 0;
+    font-size: 1.4rem;
+    text-align: center;
 }
-   
+}
+
+

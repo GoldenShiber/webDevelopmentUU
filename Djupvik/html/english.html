@@ -5,28 +5,21 @@
         <title>English Djupvik Site</title>
         <meta charset="UTF-8" />
         <link href="../CSS/reset.css" rel="stylesheet"/>
-        <link href="../CSS/djupvikCSS2.css" rel="stylesheet"/> 
-        <!-- <link href="images/favicon.ico" rel="icon" type="images/ico"/> -->
+        <link href="../CSS/djupvik.css" rel="stylesheet"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
         <meta name="description" content="description" />
     </head>
 
     <body>
-        <div id = "contianer">
+        <div id = "container">
 
             <aside>
 
-                <header>
-
-                    <!--  The header with an icon and stuff -->
-
-                </header>
-
                 <nav>
                     <div class="navbar">
-                        <a href="#">Start</a>
+                        <a href="../index.html">Start</a>
                         
-                        <button class="dropdown-btn">Om Djupvik 
+                        <button onclick="changeDropdownCounter()" class="dropdown-btn">Om Djupvik 
                             <i class="fa fa-caret-down"></i>
                           </button>
                         <div class="dropdown-container">
@@ -42,7 +35,7 @@
             </aside>
 
             <main>
-
+                <img src="../Images/D-12.jpg" alt="Djupvik Hamn Huvudbild"><img/>
                 <h2>Port of Djupvik</h2>
                 <p>
                     The Port of Djupvik is located on the east coast of Gotland very close to the beautiful smaller island Lilla Karlsö.
@@ -81,6 +74,7 @@
 
         </div>
         <script src="../js/dropdown.js" type="module"></script>
+        <script type="text/javascript" src="../js/dropdownSizeChange.js"></script>
 
     </body>
 

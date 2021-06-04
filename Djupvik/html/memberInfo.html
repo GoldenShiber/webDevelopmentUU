@@ -5,28 +5,22 @@
         <title>Djupvik - Membership page</title>
         <meta charset="UTF-8" />
         <link href="../CSS/reset.css" rel="stylesheet"/>
-        <link href="../CSS/djupvikCSS2.css" rel="stylesheet"/> 
+        <link href="../CSS/djupvik.css" rel="stylesheet"/> 
         <!-- <link href="images/favicon.ico" rel="icon" type="images/ico"/> -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
         <meta name="description" content="description" />
     </head>
 
     <body>
-        <div id = "contianer">
+        <div id = "container">
 
             <aside>
-
-                <header>
-
-                    <!--  The header with an icon and stuff -->
-
-                </header>
 
                 <nav>
                     <div class="navbar">
                         <a href="../index.html">Start</a>
                         
-                        <button class="dropdown-btn">Om Djupvik 
+                        <button onclick="changeDropdownCounter()" class="dropdown-btn">Om Djupvik 
                             <i class="fa fa-caret-down"></i>
                           </button>
                         <div class="dropdown-container">
@@ -43,28 +37,57 @@
             </aside>
 
             <main>
-                
+                <img src="../Images/D-12.jpg" alt="Djupvik Hamn Huvudbild"><img/>
                 <!-- main text -->
-                membership information <br/>
-                Detta ska vara i en tabell!!!!!!.</br>
-                Erik Ekholm, erik@djupvik.se, 070-123 45 67 </br>
 
-                Bo Lautin, bo@djupvil.se, 071-234 56 78</br>
-
-                Fredrik Bottarve, fredrik@djupvik.se, 072-345 67 89</br>
-
-                Christina Persson, christina@djupvik.se, 073-456 78 90</br>
-
-                Per-Erik Larsson, pere@djupvik.se, 074-567 89 01</br>
-
-                Maria Fagerström, maria@djupvik.se, 075-678 90 12</br>
-
-                Lars Bengtsson, lars@djupvik.se, 076-789 01 23
+                <table>
+                    <tr>
+                        <th>Namn</th>
+                        <th>Mail</th>
+                        <th>Telefonnummer</th>
+                    </tr>
+                    <tr>
+                        <td>Erik Ekholm</td>
+                        <td>erik@djupvik.se</td>
+                        <td>070-123 45 67</td>
+                    </tr>
+                    <tr>
+                        <td>Bo Lautin</td>
+                        <td>bo@djupvil.se</td>
+                        <td>071-234 56 78</td>
+                    </tr>
+                    <tr>
+                        <td>Fredrik Bottarve</td>
+                        <td>fredrik@djupvik.se</td>
+                        <td>072-345 67 89</td>
+                    </tr>
+                    <tr>
+                        <td>Christina Persson</td>
+                        <td>christina@djupvik.se</td>
+                        <td>073-456 78 90</td>
+                    </tr>
+                    <tr>
+                        <td>Per-Erik Larsson</td>
+                        <td>pere@djupvik.se</td>
+                        <td>074-567 89 01</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Fagerström</td>
+                        <td>maria@djupvik.se</td>
+                        <td>075-678 90 12</td>
+                    </tr>
+                    <tr>
+                        <td>Lars Bengtsson</td>
+                        <td>lars@djupvik.se</td>
+                        <td>076-789 01 23</td>
+                    </tr>
+                </table>
 
             </main>
 
         </div>
         <script src="../js/dropdown.js" type="module"></script>
+        <script type="text/javascript" src="../js/dropdownSizeChange.js"></script>
 
     </body>
 

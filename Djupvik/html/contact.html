@@ -5,28 +5,22 @@
         <title>Contact Djupvik</title>
         <meta charset="UTF-8" />
         <link href="../CSS/reset.css" rel="stylesheet"/>
-        <link href="../CSS/djupvikCSS2.css" rel="stylesheet"/> 
+        <link href="../CSS/djupvik.css" rel="stylesheet"/> 
         <!-- <link href="images/favicon.ico" rel="icon" type="images/ico"/> -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
         <meta name="description" content="description" />
     </head>
 
     <body>
-        <div id = "contianer">
+        <div id = "container">
 
             <aside>
-
-                <header>
-
-                    <!--  The header with an icon and stuff -->
-
-                </header>
 
                 <nav>
                     <div class="navbar">
                         <a href="../index.html">Start</a>
                         
-                        <button class="dropdown-btn">Om Djupvik 
+                        <button onclick="changeDropdownCounter()" class="dropdown-btn">Om Djupvik 
                             <i class="fa fa-caret-down"></i>
                           </button>
                         <div class="dropdown-container">
@@ -43,9 +37,7 @@
             </aside>
 
             <main>
-
-                <!-- main text -->
-                Contact stuff
+                <img src="../Images/D-12.jpg" alt="Djupvik Hamn Huvudbild"><img/>
 
                 <section>
                     <h2>Kontaktuppgifter</h2>
@@ -58,20 +50,58 @@
                     </p>
                 </section>
 
-                <!--  Kontaktformulär 
-                    - Rubrik för ärendet.
-                    - Beskrivning utav ärendet.
-                    - Val om vad det gäller (Båtplats, Medlem eller Övrigt).
-                    - Hur man vill bli kontaktad (mail, telefon eller inte alls)
-                    - Telefon
-                    - Mail
-                -->
-                Kontaktformulär :)
+                <section>
+                    <h2>Skicka in ett ärende</h2>
+                    <form method="post" action="thanks.html">
+                        <p>
+                            <label for="Title">Rubrik*:</label>
+                            <input type="text" name="title" id="Title" required />
+                        </p>
+
+                        <p>
+                            <label for="Description">Beskrivning av ärende*:</label>
+                            <!--<input type="textarea" name="description" rows="4" cols="50" id="Description" required /> -->
+                            <textarea name="description" rows="4" cols="50"></textarea>
+                        </p>
+
+                        <p>
+                            <label for="Agenda">Ärende*:</label>
+                            <select name="agenda" id="Agenda" >
+                                <option value="båtplats">Båtplats</option>
+                                <option value="medlem">Medlem</option>
+                                <option value="övrigt">Övrigt</option>
+                            </select>
+                        </p>
+
+                        <fieldset>  
+                            <legend>Hur vill du bli kontaktad?</legend>  
+                            <input type="checkbox" name="contacted_by" value="email" >Mail<br>  
+                            <input type="checkbox" name="contacted_by" value="telephone" >Telefon<br>  
+                            <input type="checkbox" name="contacted_by" value="no" >Nej<br>  
+                        </fieldset> 
+                        
+                        <p>
+                            <label for="Phone">Telefonnummer:</label> 
+                            <input type="tel" name="phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                        </p>
+
+                        <p>
+                            <label for="Email">Mail:</label>
+                            <input type="email" name="email" id="Email"/>
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Skicka" />
+                            <input type="reset" value="Rensa" />
+                        </p>
+                    </form>
+                </section>
 
             </main>
 
         </div>
         <script src="../js/dropdown.js" type="module"></script>
+        <script type="text/javascript" src="../js/dropdownSizeChange.js"></script>
 
     </body>
 
