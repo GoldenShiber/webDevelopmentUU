@@ -4,8 +4,8 @@
     <head>
         <title>Djupvik - Gästplatsen</title>
         <meta charset="UTF-8" />
-        <link href="../../CSS/reset.css" rel="stylesheet"/>
-        <link href="../../CSS/djupvik.css" rel="stylesheet"/> 
+        <link href="../../css/reset.css" rel="stylesheet"/>
+        <link href="../../css/djupvik.css" rel="stylesheet"/> 
         <!-- <link href="images/favicon.ico" rel="icon" type="images/ico"/> -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
         <meta name="description" content="description" />
@@ -19,7 +19,7 @@
                 <nav>
                     <div class="navbar">
                         <a href="../../index.html">Start</a>
-                        
+                        <a href="../english.html">English</a>
                         <button onclick="changeDropdownCounter()" class="dropdown-btn">Om Djupvik 
                             <i class="fa fa-caret-down"></i>
                           </button>
@@ -28,7 +28,6 @@
                           <a href="touristDestinations.html">Turistmålet</a>
                           <a href="history.html">Historia</a>
                         </div>
-                        <a href="../gallery.html">Galleri</a>
                         <a href="../memberInfo.html">Medlems Information</a>
                         <a href="../contact.html">Kontakta Oss</a>
                       </div>
@@ -38,15 +37,16 @@
 
             <main>
                 <img src="../../Images/D-12.jpg" alt="Djupvik Hamn Huvudbild"><img/>
-                <!-- main text -->
-                Information om gästplatsen
-                <!-- Ha med en väderleksrapport (tabell) här som skapas via javascript -->
 
-                <!-- <table class="weatherTable"> -->
 
                 </table>
 
                 <section>
+                    
+                    <h2>Väderprognos</h2>
+
+                    <div id=smhi-widget></div>
+                    <link href="../../css/weatherTable.css" rel="stylesheet"/> 
 
                     <h2>Gästhamnen</h2>
                     <p>Gästbåtar är hjärtligt välkomna! </p>
@@ -67,7 +67,8 @@
 
         </div>
         <script src="../../js/dropdown.js" type="module"></script>
-        <script type="text/javascript" src="../../js/dropdown.js"></script>
+        <script src="../../js/weatherTable.js" type="module"></script>
+        <script type="text/javascript" src="../../js/dropdownSizeChange.js"></script>
 
     </body>
 

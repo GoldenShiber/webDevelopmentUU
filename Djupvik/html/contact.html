@@ -4,8 +4,8 @@
     <head>
         <title>Contact Djupvik</title>
         <meta charset="UTF-8" />
-        <link href="../CSS/reset.css" rel="stylesheet"/>
-        <link href="../CSS/djupvik.css" rel="stylesheet"/> 
+        <link href="../css/reset.css" rel="stylesheet"/>
+        <link href="../css/djupvik.css" rel="stylesheet"/> 
         <!-- <link href="images/favicon.ico" rel="icon" type="images/ico"/> -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
         <meta name="description" content="description" />
@@ -19,7 +19,7 @@
                 <nav>
                     <div class="navbar">
                         <a href="../index.html">Start</a>
-                        
+                        <a href="english.html">English</a>
                         <button onclick="changeDropdownCounter()" class="dropdown-btn">Om Djupvik 
                             <i class="fa fa-caret-down"></i>
                           </button>
@@ -28,7 +28,6 @@
                           <a href="about/touristDestinations.html">Turistmålet</a>
                           <a href="about/history.html">Historia</a>
                         </div>
-                        <a href="gallery.html">Galleri</a>
                         <a href="memberInfo.html">Medlems Information</a>
                         <a href="#">Kontakta Oss</a>
                       </div>
@@ -54,18 +53,18 @@
                     <h2>Skicka in ett ärende</h2>
                     <form method="post" action="thanks.html">
                         <p>
-                            <label for="Title">Rubrik*:</label>
+                            <label for="Title">Rubrik*: <br/></label>
                             <input type="text" name="title" id="Title" required />
                         </p>
 
                         <p>
-                            <label for="Description">Beskrivning av ärende*:</label>
+                            <label for="Description">Beskrivning av ärende*: <br/> </label>
                             <!--<input type="textarea" name="description" rows="4" cols="50" id="Description" required /> -->
                             <textarea name="description" rows="4" cols="50"></textarea>
                         </p>
 
                         <p>
-                            <label for="Agenda">Ärende*:</label>
+                            <label for="Agenda">Ärende*: <br/></label>
                             <select name="agenda" id="Agenda" >
                                 <option value="båtplats">Båtplats</option>
                                 <option value="medlem">Medlem</option>
@@ -74,19 +73,19 @@
                         </p>
 
                         <fieldset>  
-                            <legend>Hur vill du bli kontaktad?</legend>  
+                            <legend>Hur vill du bli kontaktad? <br/></legend>  
                             <input type="checkbox" name="contacted_by" value="email" >Mail<br>  
                             <input type="checkbox" name="contacted_by" value="telephone" >Telefon<br>  
                             <input type="checkbox" name="contacted_by" value="no" >Nej<br>  
                         </fieldset> 
                         
                         <p>
-                            <label for="Phone">Telefonnummer:</label> 
+                            <label for="Phone">Telefonnummer: <br/></label> 
                             <input type="tel" name="phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
                         </p>
 
                         <p>
-                            <label for="Email">Mail:</label>
+                            <label for="Email">Mail: <br/></label>
                             <input type="email" name="email" id="Email"/>
                         </p>
 

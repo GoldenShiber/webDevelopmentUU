@@ -1,12 +1,18 @@
 @font-face {
   font-family: 'Open Sans';
-  src: url(../Fonts/Open_Sans/OpenSans-Regular.ttf);
+  src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Open Sans light';
-  src: url(../Fonts/Open_Sans/OpenSans-Light.ttf);
+  src: url(../fonts/Open_Sans/OpenSans-Light.ttf);
 }
+
+@font-face {
+  font-family: 'Open Sans Extra Bold Italic';
+  src: url(../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf);
+}
+
 
 html{font-size: 105%;}
 
@@ -29,13 +35,15 @@ h2, h3 {
 
 h1 {   
   font-size: 2rem;
-  color:#fff;
+  color:#012E40;
   margin-top: 2rem;
+  
 }
 
 h2 {
 
   font-size: 2.1rem; 
+  color: #012E40;
   margin: 2rem 0 2rem;
 }
 
@@ -48,10 +56,23 @@ h3 {
 p{
   line-height: 1.5;
   margin-bottom: 1.8rem;
+  padding: 1.5rem auto;
+  padding-top: 1.5rem;
+  
+}
+
+.nameDefinition {
+  font-family: 'Open Sans Extra Bold Italic';
+  padding-left: 1.5rem;
+}
+
+.box {
+  position: relative;
 }
 
 img{
   max-width: 100%;
+  padding: 1.5rem auto;
 }
 
 aside {
@@ -64,20 +85,24 @@ header{
   text-align: center;
 }
 
-main {
-  padding: 20px 20px px;
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
 }
 
 section {
   width: 80%;
-  margin: 0 auto;
+  margin: 1rem 1rem;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding: 10px;
 }
 
 /* Fixed sidenav, full height */
 .navbar {
-  height: 200px;
+  height: 220px;
   width: 100%;
   position: fixed;
   position: relative;
@@ -110,12 +135,7 @@ section {
   background-color: #025E73;
 }
 
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
+
 
 /* Add an active class to the active dropdown button */
 .active {
@@ -139,6 +159,7 @@ section {
 
 img[alt="Djupvik Hamn Huvudbild"]{
   padding: 1.4 1.5rem;
+
 }
 
 
@@ -150,13 +171,14 @@ input, select, textarea{
   width: 90%;
 }
 
+
 input[type="submit"], input[type="reset"]{
   background-color: #025E73;
   color: #fff;
   border: none;
   padding: 0.5rem 0.8rem;
   margin-bottom: 1rem;
-  width: 100%;
+  width: 150px;
 }
 
 textarea{
@@ -170,7 +192,17 @@ input:focus, select:focus, textarea:focus{
 }
 
 input[type="checkbox"] {
-  padding: 1rem;
+  padding: 0.4rem;
+  width: 0;
+}
+
+input[type="tel"], input[type="email"]{
+  width: 300px;
+}
+
+table{
+  width: 100%;
+  max-width: 600px;
 }
 
 td, th{
@@ -197,17 +229,18 @@ tr:nth-of-type(odd){
   #container{
     display: grid;
     grid-template-rows: 100% 100%;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     
   }
 
   main {
     /* margin-left: 30%; Same as the width of the sidenav  */
-    width: 70%
+    width: 70%;
+    width: 100%;
   }
 
   aside {
-    width: 30%;
+    width: 100%;
   }
 
   .navbar {
@@ -222,6 +255,59 @@ tr:nth-of-type(odd){
     font-size: 1.4rem;
     text-align: center;
 }
+}
+
+@media(min-width:1021px){
+  #container{
+      display: grid;
+      grid-template-rows: 100% 100%;
+      grid-template-columns: 20% 80%;
+  }
+}
+
+
+@media(min-width:300px) and (max-width:780px){
+  table, thead, tbody, th, td, tr{
+      display: block;
+      font-size: 0.7rem;
+  }
+  thead tr{
+      position: absolute;
+      top:-9999px;
+      left:-9999px;
+  }
+th{
+  visibility: hidden;
+}
+
+  tr{
+      border:1px solid #3399cc;
+  }
+  td{
+  position: relative;
+  padding-left: 50%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  }
+  td:before{
+      position: absolute;
+      top:6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+      text-align: left;
+  }
+  td:nth-of-type(1):before{
+      content: "Namn";
+  }
+  td:nth-of-type(2):before{
+      content: "Mail";
+  }
+  td:nth-of-type(3):before{
+      content: "Telefonnummer";
+  }
 }
 
 

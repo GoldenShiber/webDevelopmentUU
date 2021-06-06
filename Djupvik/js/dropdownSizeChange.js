@@ -6,12 +6,12 @@
         if(windowSize.matches){
             if(count%2==1){
             
-                document.querySelector("aside").style.height = "300px";
-                document.querySelector(".navbar").style.height="300px";
+                document.querySelector("aside").style.height = "320px";
+                document.querySelector(".navbar").style.height="320px";
             }
             else{
-            document.querySelector("aside").style.height = "200px";
-            document.querySelector(".navbar").style.height="200px";
+            document.querySelector("aside").style.height = "220px";
+            document.querySelector(".navbar").style.height="220px";
             }
         } else{
             document.querySelector("aside").style.height = "100%";
