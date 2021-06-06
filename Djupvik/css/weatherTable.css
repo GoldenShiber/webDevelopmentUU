@@ -5,7 +5,7 @@ table{
 
 td, th{
     border: 1px solid #012E40;
-    padding: 0.3 rem;
+    padding: 0.3rem;
   }
   
   td{
@@ -23,5 +23,61 @@ td, th{
   }
 
   tr:first-child th{
-    background-color: #9bb949;
+    background-color: #025E73;
   }
+
+@media(min-width:300px) and (max-width:780px){
+  /*
+    table, thead, tbody, th, td, tr{
+        display: block;
+        font-size: 0.7rem;
+    }
+    thead tr{
+        position: absolute;
+        top:-9999px;
+        left:-9999px;
+    }
+  th{
+    visibility: hidden;
+  }
+  
+    tr{
+        border:1px solid #3399cc;
+    }
+    td{
+    position: relative;
+    padding-left: 50%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    }
+    td:before{
+        position: absolute;
+        top:6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    } */
+
+    td:nth-of-type(1):before{
+        content: "Datum";
+    }
+    td:nth-of-type(2):before{
+        content: "Tid";
+    }
+    td:nth-of-type(3):before{
+        content: "Temperatur";
+    }
+
+    tr:nth-child(0) {
+      display: none;
+      border-color: #F2E4DC;
+    }
+
+    .header {
+      visibility: hidden;
+      border:0 #F2E4DC;
+    }
+}

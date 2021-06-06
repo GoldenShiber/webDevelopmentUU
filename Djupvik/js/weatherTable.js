@@ -18,6 +18,7 @@ function initiateWeatherTable(){
         cell.innerText = "Tid";
         cell = th.insertCell();
         cell.innerText = "Temperatur";
+        th.className = "header";
 
         for(let index = 0; index < weatherData.length; index++){
             var tr = table.insertRow();

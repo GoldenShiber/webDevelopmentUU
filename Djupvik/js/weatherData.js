@@ -7,8 +7,6 @@ let weatherList = [];
 
 export function getWeatherList(longitude, latitude, date){
     let weatherList = [];
-    console.log("hello")
-    console.log("Ilike memes")
     let weatherURL = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/" + longitude + "/lat/" + latitude + "/data.json";
     return fetch(weatherURL)
     .then((response) => {
@@ -26,7 +24,6 @@ export function getWeatherList(longitude, latitude, date){
     
                 for(let weatherValue of data.timeSeries){
                     if(weatherValue.validTime === weatherTime){
-                        console.log(weatherValue.parameters[10].values[0]); 
                         weatherList.push(new Weather(weatherTime.substring(0, weatherTime.indexOf("T")), weatherTime.substring(weatherTime.indexOf("T")+1, weatherTime.length -4), weatherValue.parameters[10].values[0]));
                         break;
                      }
@@ -35,7 +32,6 @@ export function getWeatherList(longitude, latitude, date){
             }
         }
         
-        console.log("gello");
         return weatherList;
     })
     
